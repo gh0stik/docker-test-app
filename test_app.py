@@ -5,7 +5,7 @@ class TestTest_func(unittest.TestCase):
 
 	def test_test_func(self):
 		results = test_func(2, 7)
-		self.assertEqual(results, 9)
+		self.assertEqual(results, 10)
 
 
 	def test_test_func2(self):
