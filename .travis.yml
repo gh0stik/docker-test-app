@@ -6,6 +6,9 @@ services:
 before_install:
  - docker build -t gh0stik/app -f Dockerfile.dev .
 
+install:
+ - pip3 install -r requirements.txt
+
 deploy:
  provider: elasticbeanstalk
  region: "eu-central-1"
