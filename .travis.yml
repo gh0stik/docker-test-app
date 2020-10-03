@@ -2,20 +2,8 @@ sudo: required
 services:
  - docker
 
-language: python
-python:
- - "3.8"
-
 before_install:
- - docker-compose build
- - pip install -U pip
- - pip install -U pytest pytest-cov
- - pip install codecov
-
-script: pytest
-after_success:
- - pytest --cov=./
- - codecov
+ - docker build -t gh0stik/app -f Dockerfile.dev .
 
 deploy:
  provider: elasticbeanstalk

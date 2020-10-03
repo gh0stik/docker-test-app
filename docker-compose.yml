@@ -8,12 +8,4 @@ services:
   ports:
    - "80:5000"
   volumes:
-   - ./templates:/var/www/html/templates 
- tests:
-  image: gh0stik:test
-  build:
-   context: .
-   dockerfile: Dockerfile.dev
-  volumes:
    - ./templates:/var/www/html/templates
-  command: ["python3", "-m", "unittest", "test_app.py"]
