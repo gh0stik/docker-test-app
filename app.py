@@ -10,7 +10,6 @@ def test_func(x, y):
 
 @app.route("/")
 def index():
-    print(render_template("index.html"))
     return render_template("index.html")
 
 if __name__ == "__main__":
